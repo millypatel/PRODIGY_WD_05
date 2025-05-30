@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1.5s ease-in-out;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.app {
+  position: relative;
+  max-width: 400px;
+  margin: 6% auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  z-index: 2;
+  text-align: center;
+  user-select: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+input#locationInput {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  margin-bottom: 15px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+input#locationInput::placeholder {
+  color: #e0e0e0;
+}
+
+input#locationInput:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.6);
+  transition: background 0.4s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+.weather {
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.weather h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.weather p {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+
+/* Autocomplete suggestions dropdown */
+.suggestions {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  z-index: 10;
+}
+
+.suggestions-list {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  max-height: 160px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 0;
+}
+
+.suggestions-list li {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.25s ease;
+}
+
+.suggestions-list li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.suggestions-list li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+  
+  <div class="app">
+    <h1>Live Weather App</h1>
+    
+    <input
+      type="text"
+      id="locationInput"
+      placeholder="Enter city or country..."
+      autocomplete="off"
+    />
+    <div class="suggestions" id="suggestions"></div>
+
+    <div class="buttons">
+      <button onclick="getWeatherByCity()">Search</button>
+      <button onclick="getWeatherByLocation()">Use My Location</button>
+    </div>
+
+    <div class="weather" id="weather">
+      <h2 id="city">--</h2>
+      <p id="temp">-- °C</p>
+      <p id="condition">--</p>
+      <p id="humidity">Humidity: --%</p>
+      <p id="wind">Wind: -- km/h</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
